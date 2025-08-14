@@ -17,6 +17,22 @@ const getMacroReducerinitialState = () => {
 };
 const macroReducer = (state, action) => {
     switch (action.type) {
+        case 'editMacro':
+            return state.map((page, pidx) => {
+                if (pidx === action.payload.page) {
+                    return { title: page.title, macros: page.macros.map((macro, midx) => {
+                            if (midx === action.payload.entry) {
+                                return { ...macro,
+                                    ...action.payload.macro
+                                };
+                            }
+                            else
+                                return macro;
+                        }) };
+                }
+                else
+                    return page;
+            });
         default:
             return state;
     }

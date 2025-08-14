@@ -42,8 +42,8 @@ export const Macros = (props: IProps) => {
         <Text color={config.colorMap.main}> // Terminal Shortcuts \\</Text>
         <Box flexDirection='row'>
             <Text>Page: </Text>
-            {macros.map((page, idx) => <Fragment>
-                <Text inverse={idx === naviState.macroNavi.page} key={idx}>{`${page.title ?? idx}`}</Text>
+            {macros.map((page, idx) => <Fragment key={idx}>
+                <Text inverse={idx === naviState.macroNavi.page} >{`${page.title ?? idx}`}</Text>
                 <Text>{" "}</Text>
             </Fragment>)}
         </Box>

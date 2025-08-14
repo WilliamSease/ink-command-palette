@@ -1,13 +1,15 @@
 import { ForegroundColorName } from 'chalk';
 import fs from 'fs';
 
+type Macro = {
+    title?: string,
+    command?: string,
+    color?: ForegroundColorName
+}
+
 export type MacroReducerState = {
     title?: string,
-    macros: {
-        title?: string,
-        command?: string,
-        color?: ForegroundColorName
-    }[]
+    macros: Macro[]
 
 }[]
 
@@ -32,15 +34,27 @@ const getMacroReducerinitialState: () => MacroReducerState = () => {
 
 type MacroReducerAction =
     | {
-        type: '';
-
+        type: 'editMacro';
+        payload: {macro:Partial<Macro>, page:number, entry:number}
     };
 
 const macroReducer = (
     state: MacroReducerState,
     action: MacroReducerAction,
 ): MacroReducerState => {
-    switch (action.type) {
+    switch (action.type) { 
+        case 'editMacro':
+            return state.map((page,pidx) => {
+                if (pidx === action.payload.page) {
+                    return {title:page.title, macros:page.macros.map((macro, midx) => {
+                        if (midx === action.payload.entry) {
+                            return {...macro,
+                                ...action.payload.macro
+                            }
+                        } else return macro
+                    })}   
+                } else return page;
+            })
         default:
             return state
     }
