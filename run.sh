@@ -2,7 +2,7 @@
 
 for arg in "$@"; do
   if [[ "$arg" == "--help" ]]; then
-    echo "Ink Terminal Macros -- William Sease 2025"
+    echo "Ink Command Pallete -- William Sease 2025"
     echo ""
     echo "--clean-install"
     echo "        remove ./js (compiled javascript) and ./node_modules (node packages)."
@@ -13,7 +13,7 @@ for arg in "$@"; do
     echo "--help"
     echo "        shows this screen"
     echo ""
-    echo "Complaints? github.com/williamsease/ink-terminal-macros"
+    echo "Complaints? github.com/williamsease/ink-command-pallete"
     echo "WilliamSease.github.io / WilliamSoft.net"
     exit
   fi

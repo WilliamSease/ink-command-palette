@@ -1,5 +1,5 @@
 {
-	"name": "ink-terminal-macros",
+	"name": "ink-command-pallete",
 	"version": "0.0.0",
 	"license": "MIT",
 	"bin": "dist/cli.js",
@@ -10,7 +10,7 @@
 	"scripts": {
 		"build": "tsc",
 		"start": "tsc && node ./js/cli.js",
-		"package": "tsc && ./term-macros.sh"
+		"package": "tsc && ./run.sh"
 	},
 	"files": [
 		"dist"

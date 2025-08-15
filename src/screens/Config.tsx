@@ -75,7 +75,7 @@ export const Config = (props: IProps) => {
         <Box><Selector field={actions[field]} active={actions[2]} /><Text>Exit Program</Text><Text color={'gray'}> -- Kill the program immediately, nothing saved.</Text></Box>
         <Text> </Text>
         <Text> </Text>
-        <Box><Selector field={actions[field]} active={actions[3]} /><Text>Ink Terminal Macros -- William Sease 2025 (MORE)</Text></Box>
+        <Box><Selector field={actions[field]} active={actions[3]} /><Text>Ink Command Pallete -- William Sease 2025 (MORE)</Text></Box>
         <Text> </Text>
         <Text>{` backup your config at:`}</Text>
         <Text>{` ${path.resolve('./storage')}`}</Text>

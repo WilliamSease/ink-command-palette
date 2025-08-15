@@ -56,7 +56,7 @@ export const Macros = (props: IProps) => {
     });
 
     return (<Fragment>
-        <Text color={config.colorMap.main}> // Terminal Shortcuts \\</Text>
+        <Text color={config.colorMap.main}> // Command Pallete \\</Text>
         <Box flexDirection='row'>
             <Text>Page: </Text>
             {macros.map((page, idx) => <Fragment key={idx}>

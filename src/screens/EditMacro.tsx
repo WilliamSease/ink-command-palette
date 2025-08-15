@@ -68,7 +68,7 @@ export const EditMacro = (props: IProps) => {
         <Text color={config.colorMap.main}> {`// Editing macro at page ${naviState.editMacro?.page} entry ${naviState.editMacro?.vert} \\\\`} </Text>
         <Text> </Text>
         <Box><Selector field={actions[field]} active={actions[0]} /><Text>Title:</Text><Text>{activeMacro?.title}</Text></Box>
-        <Text color={'gray'}> If title is empty, command/script is displayed.</Text>
+        <Text color={'gray'}> If title is empty, command is displayed.</Text>
         <Box><Selector field={actions[field]} active={actions[1]} /><Text>Command: </Text><Text>{activeMacro?.command}</Text></Box>
         <Box><Selector field={actions[field]} active={actions[2]} /><Text>Color (Enter): </Text><Text color={activeMacro?.color}>{activeMacro?.color}</Text></Box>
         <Box><Selector field={actions[field]} active={actions[3]} /><Text>Page Title: </Text><Text>{macroState[naviState.editMacro?.page ?? 0]?.title ?? ""}</Text></Box>

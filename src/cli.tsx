@@ -7,7 +7,7 @@ import App from './App.js';
 meow(
 	`
 	Usage
-	  $ term-macros
+	  $ use ./run.sh.
 	`,
 	{
 		importMeta: import.meta,

@@ -1,7 +1,6 @@
 import { Box, useInput, useStdout, Text, useApp } from 'ink';
 import React, { useReducer } from 'react';
 import { configReducer, getConfigReducerinitialState } from './state/configReducer.js';
-//import fs from 'fs';
 import { Macros } from './screens/Macros.js';
 import { getMacroReducerinitialState, macroReducer } from './state/macroReducer.js';
 import { getNaviReducerinitialState, naviReducer } from './state/navigationReducer.js';
