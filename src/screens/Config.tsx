@@ -2,8 +2,10 @@ import { Dispatch, Fragment, useState } from "react"
 import { NaviReducerAction, NaviReducerState } from "../state/navigationReducer.js"
 import { ConfigReducerAction, ConfigReducerState } from "../state/configReducer.js"
 import React from "react"
-import { Box, Text, useApp, useInput } from 'ink'
+import { Box, Text, useApp, useInput, } from 'ink'
+//import TextInput from 'ink-text-input';
 import fs from 'fs';
+import path from 'path'
 import { Writer } from "../components/Writer.js"
 import { Selector } from "../components/Selector.js"
 
@@ -72,9 +74,10 @@ export const Config = (props: IProps) => {
         <Box><Selector field={actions[field]} active={actions[1]} /><Writer write={write}/></Box>
         <Box><Selector field={actions[field]} active={actions[2]} /><Text>Exit Program</Text><Text color={'gray'}> -- Kill the program immediately, nothing saved.</Text></Box>
         <Text> </Text>
-        <Box><Selector field={actions[field]} active={actions[3]} /><Text color={'redBright'}>Nuke Config</Text><Text color={'gray'}> -- Nuke the config</Text></Box>
-        <Box><Selector field={actions[field]} active={actions[4]} /><Text color={'redBright'}>Nuke Macros</Text><Text color={'gray'}> -- Nuke all your macros (ALL OF THEM)</Text></Box>
         <Text> </Text>
-        <Box><Selector field={actions[field]} active={actions[5]} /><Text>Ink Terminal Macros -- William Sease 2025 (MORE)</Text></Box>
+        <Box><Selector field={actions[field]} active={actions[3]} /><Text>Ink Terminal Macros -- William Sease 2025 (MORE)</Text></Box>
+        <Text> </Text>
+        <Text>{` backup your config at:`}</Text>
+        <Text>{` ${path.resolve('./storage')}`}</Text>
     </Fragment>
 }

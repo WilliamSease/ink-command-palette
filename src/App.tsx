@@ -32,7 +32,7 @@ export default function App() {
 			borderStyle={'classic'}
 		>
 			{navi.configOpen ?
-				<Config macros={[macros,macroDispatch]} config={[config, configDispatch]} navi={[navi, naviDispatch]} /> :
+				<Config config={[config, configDispatch]} navi={[navi, naviDispatch]} /> :
 				navi.editMacro !== undefined ?
 					<EditMacro config={config} macros={[macros,macroDispatch]} navi={[navi, naviDispatch]}/> :
 					<Macros config={config} macros={macros} navi={[navi, naviDispatch]} />}

@@ -43,6 +43,12 @@ if [ ! -d "js" ]; then
   echo "OK!!!!!!"
 fi
 
+if [ ! -d "storage" ]; then
+  echo "storage not found"
+  mkdir storage
+fi
+
+
 for arg in "$@"; do
   if [[ "$arg" == "--build" ]]; then
     npm run build
