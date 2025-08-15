@@ -1,10 +1,10 @@
-# Terminal Macros
+# Ink Command Pallete
 
 > Thanks [create-ink-app](https://github.com/vadimdemedes/create-ink-app)
 
 ## Install
 
-./term-macros.sh will attempt the install process when you run it.
+./run.sh will attempt the install process when you run it.
 
 Requires:
 npm (assembling node_modules)
