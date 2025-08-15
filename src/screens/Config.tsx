@@ -6,21 +6,18 @@ import { Box, Text, useApp, useInput } from 'ink'
 import fs from 'fs';
 import { Writer } from "../components/Writer.js"
 import { Selector } from "../components/Selector.js"
-import { MacroReducerAction, MacroReducerState } from "../state/macroReducer.js"
 
 
 type IProps = {
     navi: [NaviReducerState, Dispatch<NaviReducerAction>],
     config: [ConfigReducerState, Dispatch<ConfigReducerAction>]
-    macros: [MacroReducerState, Dispatch<MacroReducerAction>]
 }
 
-const actions = ['mainColor','writeOut','exit','nukeConfig','nukeMacros','openAbout']
+const actions = ['mainColor','writeOut','exit','openAbout']
 
 export const Config = (props: IProps) => {
-    const { navi, config, macros } = props;
+    const { navi, config } = props;
     const [configState, configDispatch] = config
-    const [, macroDispatch] = macros
     const [, naviDispatch] = navi
     const { exit } = useApp();
 
@@ -58,12 +55,6 @@ export const Config = (props: IProps) => {
                     break;
                 case 'exit':
                     exit();
-                    break;
-                case 'nukeConfig':
-                    configDispatch({type:'nuke'})
-                    break;
-                case 'nukeMacros':
-                    macroDispatch({type:'nuke'})
                     break;
                 case 'openAbout':
                     fs.writeFile('./toRun', 'xdg-open https://williamsease.github.io',() => exit());
