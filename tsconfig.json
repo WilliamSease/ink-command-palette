@@ -1,7 +1,7 @@
 {
 	"extends": "@sindresorhus/tsconfig",
 	"compilerOptions": {
-		"outDir": "js",
+		"outDir": "js"
 	},
-	"include": ["src"],
+	"include": ["src"]
 }

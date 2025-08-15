@@ -11,7 +11,7 @@
 		"build": "tsc",
 		"start": "tsc && node ./js/cli.js",
 		"package": "tsc && ./run.sh",
-		"format": "prettier ./* -c"
+		"format": "prettier --write ./*"
 	},
 	"files": [
 		"dist"
