@@ -24,6 +24,7 @@ for arg in "$@"; do
     echo "removing ./js/ and /node_modules directories...."
     rm -rf ./js
     rm -rf ./node_modules
+    rm ./package-lock.json
   fi
 done
 
