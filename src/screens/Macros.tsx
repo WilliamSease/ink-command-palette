@@ -1,9 +1,10 @@
-import { Dispatch, Fragment } from "react"
+import { Dispatch, Fragment, useCallback } from "react"
 import { ConfigReducerState, } from "../state/configReducer.js"
 import React from "react"
-import { useInput, Text, Box, } from 'ink';
+import { useInput, Text, Box, useApp, } from 'ink';
 import { MacroReducerState } from "../state/macroReducer.js";
 import { NaviReducerAction, NaviReducerState } from "../state/navigationReducer.js";
+import fs from "fs"
 
 
 type IProps = {
@@ -14,8 +15,14 @@ type IProps = {
 
 export const Macros = (props: IProps) => {
     const { macros, navi, config } = props;
+    const { exit } = useApp();
+
 
     const [naviState, naviDispatch] = navi
+
+    const fire = useCallback((vert:number) => {
+        fs.writeFile('./toRun', macros[naviState.macroNavi.page]?.macros[vert]?.command ?? "",() => exit());
+    },[naviState.macroNavi.page])
 
     useInput((input, key) => {
         if (key.downArrow) {
@@ -35,6 +42,16 @@ export const Macros = (props: IProps) => {
         }
         if (input === 'C' || input === 'c') {
             naviDispatch({ type: 'toggleConfigOpen' })
+        } if (input >= '0' && input <= '9') {
+            let toFire = parseInt(input)
+            if (toFire === 0) {
+                toFire = 9
+            } else {
+                toFire = toFire - 1
+            }
+            fire(toFire)
+        } if (key.return) {
+            fire(naviState.macroNavi.vert)
         }
     });
 
@@ -47,9 +64,9 @@ export const Macros = (props: IProps) => {
                 <Text>{" "}</Text>
             </Fragment>)}
         </Box>
-        {new Array(9).fill("").map((_arr, idx) => `${idx + 1}`).concat(`0`).map((str, idx) =>
+        {macros[naviState.macroNavi.page]?.macros.map((macro, idx) =>
             <Box flexDirection='row' key={idx}>
-                <Text>{`${idx === naviState.macroNavi.vert ? ">" : " "}${str})`}</Text>
+                <Text color={macro.color}>{`${idx === naviState.macroNavi.vert ? ">" : " "}${(idx + 1) % 10}) ${macro.title !== '' ? macro.title : macro.command}`}</Text>
             </Box>)}
         <Box flexDirection='row'>
             <Text>(E)dit </Text>

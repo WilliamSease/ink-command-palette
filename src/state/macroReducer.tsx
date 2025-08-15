@@ -2,31 +2,35 @@ import { ForegroundColorName } from 'chalk';
 import fs from 'fs';
 
 type Macro = {
-    title?: string,
-    command?: string,
-    color?: ForegroundColorName
+    title: string,
+    command: string,
+    color: ForegroundColorName
 }
 
 export type MacroReducerState = {
-    title?: string,
+    title: string,
     macros: Macro[]
 
 }[]
 
 
-const getMacroReducerinitialState: () => MacroReducerState = () => {
-    if (fs.existsSync('./storage/macro.json')) {
+const getMacroReducerinitialState: (read?:boolean) => MacroReducerState = (read =  true) => {
+    if (fs.existsSync('./storage/macro.json') && read) {
         return (JSON.parse(fs.readFileSync("./storage/macro.json", 'utf-8')))
     } else {
         //write program default state
-        let output: MacroReducerState = new Array(6).fill("").map((_val, idx) => ({
-            title: `${idx}`,
-            macros: new Array(10).fill("").map(() => ({
-                title: undefined, command: undefined, color: 'white'
+        let output: MacroReducerState = new Array(6).fill("").map((_val, pidx) => ({
+            title: `${pidx}`,
+            macros: new Array(10).fill("").map((_val,midx) => (pidx === 0 && midx === 0 ? {
+                title:"Example Script",
+                command:"./scripts/scriptExample.sh",
+                color:'greenBright'
+            }: {
+                title: "", command: "", color: 'white'
             }))
         }));
-
-        fs.writeFileSync('./storage/macro.json',JSON.stringify(output));
+        
+        fs.writeFileSync('./storage/macro.json',JSON.stringify(output,null,2));
 
         return output;
     }
@@ -36,7 +40,7 @@ type MacroReducerAction =
     | {
         type: 'editMacro';
         payload: {macro:Partial<Macro>, page:number, entry:number}
-    };
+    } | {type:'nuke'};
 
 const macroReducer = (
     state: MacroReducerState,
@@ -55,6 +59,9 @@ const macroReducer = (
                     })}   
                 } else return page;
             })
+        case 'nuke':
+				const output = getMacroReducerinitialState(false);
+				return output;
         default:
             return state
     }

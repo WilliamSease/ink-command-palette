@@ -1,1 +1,332 @@
-[{"title":"0","macros":[{"color":"red"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"}]},{"title":"1","macros":[{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"}]},{"title":"2","macros":[{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"}]},{"title":"3","macros":[{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"}]},{"title":"4","macros":[{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"}]},{"title":"5","macros":[{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"},{"color":"white"}]}]
+[
+  {
+    "title": "0",
+    "macros": [
+      {
+        "title": "Example Script",
+        "command": "./scripts/scriptExample.sh",
+        "color": "greenBright"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      }
+    ]
+  },
+  {
+    "title": "1",
+    "macros": [
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      }
+    ]
+  },
+  {
+    "title": "2",
+    "macros": [
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      }
+    ]
+  },
+  {
+    "title": "3",
+    "macros": [
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      }
+    ]
+  },
+  {
+    "title": "4",
+    "macros": [
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      }
+    ]
+  },
+  {
+    "title": "5",
+    "macros": [
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      },
+      {
+        "title": "",
+        "command": "",
+        "color": "white"
+      }
+    ]
+  }
+]

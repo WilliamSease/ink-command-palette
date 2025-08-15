@@ -1,8 +1,6 @@
 import { ForegroundColorName } from "chalk";
 
 const colors: ForegroundColorName[] = [
-    'black',
-    'blackBright',
     'blue',
     'blueBright',
     'cyan',

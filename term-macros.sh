@@ -9,6 +9,12 @@ if [ ! -d "node_modules" ]; then
   npm install
 fi
 
+if [ ! -d "js" ]; then
+  echo "js folder not found"
+  echo "running typescript compiler via npm..."
+  npm run build
+fi
+
 for arg in "$@"; do
   if [[ "$arg" == "--build" ]]; then
     npm run build
