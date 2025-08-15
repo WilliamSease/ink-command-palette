@@ -4,8 +4,8 @@
 
 ## Install
 
-```bash
-$ npm run install
-```
-## Run (after install)
-We use a trick to sneak the selected command out of Node. You have to run from ./term-macros.sh for the command to be executed.
+./term-macros.sh will attempt the install process when you run it.
+
+Requires:
+npm (assembling node_modules)
+node (Unsure which versions work but 22.0.0 works fine)
