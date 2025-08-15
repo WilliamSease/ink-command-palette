@@ -8,6 +8,7 @@ import { cycleColor } from "../util/Colors.js"
 import fs from 'fs';
 import { Writer, WriteState } from "../components/Writer.js"
 import { Selector } from "../components/Selector.js"
+import  TextInput  from "ink-text-input"
 
 
 type IProps = {
@@ -69,7 +70,7 @@ export const EditMacro = (props: IProps) => {
         <Text> </Text>
         <Box><Selector field={actions[field]} active={actions[0]} /><Text>Title:</Text><Text>{activeMacro?.title}</Text></Box>
         <Text color={'gray'}> If title is empty, command is displayed.</Text>
-        <Box><Selector field={actions[field]} active={actions[1]} /><Text>Command: </Text><Text>{activeMacro?.command}</Text></Box>
+        <Box><Selector field={actions[field]} active={actions[1]} /><Text>Command: </Text><TextInput focus={actions[field] === actions[1]} value={activeMacro?.command ?? ""} onChange={(val) => macroDispatch({type:'editMacro', payload:{macro:{command:val}, page:naviState.editMacro?.page ?? 0, entry:naviState.editMacro?.vert ?? 0}})} /></Box>
         <Box><Selector field={actions[field]} active={actions[2]} /><Text>Color (Enter): </Text><Text color={activeMacro?.color}>{activeMacro?.color}</Text></Box>
         <Box><Selector field={actions[field]} active={actions[3]} /><Text>Page Title: </Text><Text>{macroState[naviState.editMacro?.page ?? 0]?.title ?? ""}</Text></Box>
         <Text> </Text>

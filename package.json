@@ -10,7 +10,8 @@
 	"scripts": {
 		"build": "tsc",
 		"start": "tsc && node ./js/cli.js",
-		"package": "tsc && ./run.sh"
+		"package": "tsc && ./run.sh",
+		"format": "prettier ./* -c"
 	},
 	"files": [
 		"dist"
@@ -33,7 +34,7 @@
 		"eslint-config-xo-react": "^0.27.0",
 		"eslint-plugin-react": "^7.32.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
-		"prettier": "^2.8.7",
+		"prettier": "^2.8.8",
 		"ts-node": "^10.9.1",
 		"typescript": "^5.0.3"
 	},
