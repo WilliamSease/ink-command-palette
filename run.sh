@@ -26,6 +26,8 @@ for arg in "$@"; do
     unzip -l main.zip
     rm main.zip
     echo "OK :D :D :D :D"
+    echo "!!! You MUST run with --clean-install to build this code and see changes."
+    exit
   fi
 done
 
