@@ -2,3 +2,5 @@ node_modules
 js
 toRun
 storage
+package-lock.json
+main.zip

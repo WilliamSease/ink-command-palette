@@ -20,6 +20,16 @@ for arg in "$@"; do
 done
 
 for arg in "$@"; do
+  if [[ "$arg" == "--update" ]]; then
+    echo "updating (pulling .zip)"
+    curl -L -O https://github.com/WilliamSease/ink-command-pallette/archive/refs/heads/main.zip
+    unzip -l main.zip
+    rm main.zip
+    echo "OK :D :D :D :D"
+  fi
+done
+
+for arg in "$@"; do
   if [[ "$arg" == "--clean-install" ]]; then
     echo "removing ./js/ and /node_modules directories...."
     rm -rf ./js
