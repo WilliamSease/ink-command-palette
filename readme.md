@@ -2,6 +2,10 @@
 
 > Thanks [create-ink-app](https://github.com/vadimdemedes/create-ink-app)
 
+## Demo (todo)
+
+https://user-images.githubusercontent.com/someLink.mp4
+
 ## Install
 
 ./run.sh will attempt the install process when you run it.
