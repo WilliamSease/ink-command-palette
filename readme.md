@@ -8,9 +8,11 @@
 
 to create a terminal alias, put something like this in ~/.bashrc (replacing the path with the path of run.sh):
 
-~~~mac () { 
+~~~
+mac () { 
     ~/Documents/GitHub/ink-command-pallette/run.sh ${1}
-}~~~
+}
+~~~
 
 ## Requirements
 
