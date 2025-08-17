@@ -110,32 +110,38 @@ export const EditMacro = (props: IProps) => {
 	return (
 		<Fragment>
 			{editing ? (
-				<TextInput
-					value={
-						editing === 'command'
-							? activeMacro!.command
-							: editing === 'title'
-							? activeMacro!.title
-							: macroState[naviState.editMacro?.page ?? 0]!.title ?? ''
-					}
-					onChange={val => {
-						if (editing === 'title' || editing === 'command')
-							macroDispatch({
-								type: 'editMacro',
-								payload: {
-									macro: editing === 'title' ? {title: val} : {command: val},
-									page: naviState.editMacro?.page ?? 0,
-									entry: naviState.editMacro?.vert ?? 0,
-								},
-							});
-						else if (editing === 'pageTitle') {
-							macroDispatch({
-								type: 'editPageTitle',
-								payload: {newTitle: val, page: naviState.macroNavi.page},
-							});
+				<Fragment>
+					<Text color={config.colorMap.main}>
+						{' '}
+						{`// Editing ${editing} of this macro (Enter to return) \\\\`}{' '}
+					</Text>
+					<TextInput
+						value={
+							editing === 'command'
+								? activeMacro!.command
+								: editing === 'title'
+								? activeMacro!.title
+								: macroState[naviState.editMacro?.page ?? 0]!.title ?? ''
 						}
-					}}
-				/>
+						onChange={val => {
+							if (editing === 'title' || editing === 'command')
+								macroDispatch({
+									type: 'editMacro',
+									payload: {
+										macro: editing === 'title' ? {title: val} : {command: val},
+										page: naviState.editMacro?.page ?? 0,
+										entry: naviState.editMacro?.vert ?? 0,
+									},
+								});
+							else if (editing === 'pageTitle') {
+								macroDispatch({
+									type: 'editPageTitle',
+									payload: {newTitle: val, page: naviState.macroNavi.page},
+								});
+							}
+						}}
+					/>
+				</Fragment>
 			) : (
 				<Fragment>
 					<Text color={config.colorMap.main}>
