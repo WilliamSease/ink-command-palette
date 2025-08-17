@@ -36,4 +36,3 @@ git (if pulling an update)
     --help
             shows this screen
 
---help
