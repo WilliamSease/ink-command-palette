@@ -47,7 +47,7 @@ done
 
 if [ ! -d "node_modules" ]; then
   echo "node_modules not present, attempting install."
-  echo "Make sure you have npm & nvm."
+  echo "Make sure you have npm."
   npm install
   echo ""
   echo "OK!!!!!!"

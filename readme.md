@@ -24,8 +24,6 @@ npm (assembling node_modules)
 
 node (running the program itself)
 
-git (if pulling an update)
-
 ## Usage
 
 ./run.sh

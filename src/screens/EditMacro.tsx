@@ -113,7 +113,7 @@ export const EditMacro = (props: IProps) => {
 				<Fragment>
 					<Text color={config.colorMap.main}>
 						{' '}
-						{`// Editing ${editing} of this macro (Enter to return) \\\\`}{' '}
+						{`// Editing ${editing} of this entry (Enter to return) \\\\`}{' '}
 					</Text>
 					<TextInput
 						value={
@@ -146,7 +146,7 @@ export const EditMacro = (props: IProps) => {
 				<Fragment>
 					<Text color={config.colorMap.main}>
 						{' '}
-						{`// Editing macro at page ${naviState.editMacro?.page} entry ${naviState.editMacro?.vert} \\\\`}{' '}
+						{`// Editing entry at page ${naviState.editMacro?.page} entry ${naviState.editMacro?.vert} \\\\`}{' '}
 					</Text>
 					<Text> </Text>
 					<Box>

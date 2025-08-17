@@ -1,6 +1,5 @@
 import {ForegroundColorName} from 'chalk';
 import fs from 'fs';
-import path from 'path';
 
 type Macro = {
 	title: string;
@@ -26,7 +25,7 @@ const getMacroReducerinitialState: (read?: boolean) => MacroReducerState = (
 				pidx === 0 && midx === 0
 					? {
 							title: 'Example Script',
-							command: path.resolve('./scripts/scriptExample.sh'),
+							command: "echo hello world!",
 							color: 'greenBright',
 					  }
 					: {
