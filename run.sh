@@ -1,4 +1,8 @@
 #!/bin/bash
+SOURCE_DIR=$(pwd)
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+cd ${SCRIPT_DIR}
 
 for arg in "$@"; do
   if [[ "$arg" == "--help" ]]; then
@@ -78,16 +82,17 @@ if ! command -v node &> /dev/null; then
   exit 1
 fi
 
-if [[ -s toRun ]]; then
-  rm toRun
+if [[ -s ${SCRIPT_DIR}/toRun ]]; then
+  rm ${SCRIPT_DIR}/toRun
 fi
 
 node ./js/cli.js
+cd ${SOURCE_DIR}
 
 # Check if 'toRun' file exists and is not empty
-if [[ -s toRun ]]; then
-  CMD=$(cat toRun)
-  rm toRun
+if [[ -s ${SCRIPT_DIR}/toRun ]]; then
+  CMD=$(cat ${SCRIPT_DIR}/toRun)
+  rm ${SCRIPT_DIR}/toRun
   $CMD
 else
   echo "No command to run."

@@ -1,5 +1,6 @@
 import {ForegroundColorName} from 'chalk';
 import fs from 'fs';
+import path from 'path';
 
 type Macro = {
 	title: string;
@@ -25,7 +26,7 @@ const getMacroReducerinitialState: (read?: boolean) => MacroReducerState = (
 				pidx === 0 && midx === 0
 					? {
 							title: 'Example Script',
-							command: './scripts/scriptExample.sh',
+							command: path.resolve('./scripts/scriptExample.sh'),
 							color: 'greenBright',
 					  }
 					: {
@@ -47,6 +48,7 @@ type MacroReducerAction =
 			type: 'editMacro';
 			payload: {macro: Partial<Macro>; page: number; entry: number};
 	  }
+	| {type: 'editPageTitle'; payload: {page: number; newTitle: string}}
 	| {type: 'nuke'};
 
 const macroReducer = (
@@ -64,6 +66,15 @@ const macroReducer = (
 								return {...macro, ...action.payload.macro};
 							} else return macro;
 						}),
+					};
+				} else return page;
+			});
+		case 'editPageTitle':
+			return state.map((page, pidx) => {
+				if (pidx === action.payload.page) {
+					return {
+						title: action.payload.newTitle,
+						macros: page.macros,
 					};
 				} else return page;
 			});

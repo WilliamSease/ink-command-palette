@@ -40,7 +40,11 @@ export default function App() {
 		}
 	});
 
-	return stdout.rows >= 15 ? (
+	return stdout.getWindowSize()[0] <= 65 ? (
+		<Text>Expand Terminal to 65 rows ~please~</Text>
+	) : stdout.rows <= 15 ? (
+		<Text>Expand Terminal to 15 rows ~please~</Text>
+	) : (
 		<Box flexDirection="column" height={15} borderStyle={'classic'}>
 			{navi.configOpen ? (
 				<Config config={[config, configDispatch]} navi={[navi, naviDispatch]} />
@@ -54,7 +58,5 @@ export default function App() {
 				<Macros config={config} macros={macros} navi={[navi, naviDispatch]} />
 			)}
 		</Box>
-	) : (
-		<Text>Expand Terminal to 15 rows ~please~</Text>
 	);
 }

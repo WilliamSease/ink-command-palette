@@ -36,7 +36,7 @@ export const Config = (props: IProps) => {
 			setField(prev => (prev === actions.length - 1 ? 0 : prev + 1));
 		}
 		if (key.upArrow) {
-			setField(prev => (prev === 0 ? actions.length : prev - 1));
+			setField(prev => (prev === 0 ? actions.length - 1 : prev - 1));
 		}
 		if (key.return) {
 			switch (actions[field]) {
