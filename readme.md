@@ -6,6 +6,16 @@
 
 ./run.sh will attempt the install process when you run it.
 
-Requires:
+to create a terminal alias, put something like this in ~/.bashrc (replacing the path with the path of run.sh):
+
+~~~mac () { 
+    ~/Documents/GitHub/ink-command-pallette/run.sh ${1}
+}~~~
+
+## Requirements
+
 npm (assembling node_modules)
-node (Unsure which versions work but 22.0.0 works fine)
+node (running the program itself)
+git (if pulling an dupdate)
+
+## Usage

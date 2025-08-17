@@ -11,9 +11,10 @@ for arg in "$@"; do
     echo "--clean-install"
     echo "        remove ./js (compiled javascript) and ./node_modules (node packages)."
     echo "        Then a reinstall will be attempted."
-
     echo "--build"
     echo "        force run of tsc to compile the javascript again"
+    echo "--update"
+    echo "        pull the latest code from github (requires Git)"
     echo "--help"
     echo "        shows this screen"
     echo ""
@@ -45,7 +46,7 @@ for arg in "$@"; do
 done
 
 if [ ! -d "node_modules" ]; then
-  echo "node_modules not present Attempting install."
+  echo "node_modules not present, attempting install."
   echo "Make sure you have npm & nvm."
   npm install
   echo ""
