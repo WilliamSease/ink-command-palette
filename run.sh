@@ -27,11 +27,11 @@ done
 for arg in "$@"; do
   if [[ "$arg" == "--update" ]]; then
     echo "updating (pulling .zip)"
-    curl -L -O https://github.com/WilliamSease/ink-command-pallette/archive/refs/heads/main.zip
+    curl -L -O https://github.com/WilliamSease/ink-command-palette/archive/refs/heads/main.zip
     unzip main.zip -d .
-    rsync -a ink-command-pallette-main/. ./
-    rm -rf ./ink-command-pallete-main
+    rsync -a ink-command-palette-main/. ./
     rm main.zip
+    rm -rf ./ink-command-palette-main/
     echo "OK :D :D :D :D"
     echo "!!! You MUST run with --clean-install to build this code and see changes."
     exit
