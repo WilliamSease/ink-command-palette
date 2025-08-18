@@ -6,6 +6,14 @@
 
 https://user-images.githubusercontent.com/someLink.mp4
 
+## Download
+
+```
+curl -L -O https://github.com/WilliamSease/ink-command-pallette/archive/refs/heads/main.zip
+unzip -l main.zip
+rm main.zip
+```
+
 ## Install
 
 ./run.sh will attempt the install process when you run it.
