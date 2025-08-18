@@ -109,7 +109,7 @@ export const Config = (props: IProps) => {
 			<Text> </Text>
 			<Box>
 				<Selector field={actions[field]} active={actions[3]} />
-				<Text>Ink Command Pallete -- William Sease 2025 (MORE)</Text>
+				<Text>Ink Command Palette -- William Sease 2025 (MORE)</Text>
 			</Box>
 			<Text> </Text>
 			<Text>{` backup your config at:`}</Text>

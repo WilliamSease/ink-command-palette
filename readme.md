@@ -1,4 +1,4 @@
-# Ink Command Pallete
+# Ink Command Palette
 
 > Thanks [create-ink-app](https://github.com/vadimdemedes/create-ink-app)
 

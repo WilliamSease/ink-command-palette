@@ -85,7 +85,7 @@ export const Macros = (props: IProps) => {
 
 	return (
 		<Fragment>
-			<Text color={config.colorMap.main}> // Command Pallete \\</Text>
+			<Text color={config.colorMap.main}> // Command Palette \\</Text>
 			<Box flexDirection="row">
 				<Text>Page: </Text>
 				{macros.map((page, idx) => (
