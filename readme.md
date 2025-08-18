@@ -2,9 +2,9 @@
 
 > Thanks [create-ink-app](https://github.com/vadimdemedes/create-ink-app)
 
-## Demo (todo)
+## Demo
 
-https://user-images.githubusercontent.com/someLink.mp4
+https://github.com/user-attachments/assets/cb7f969c-f883-417e-91fa-4030cc88ddc3
 
 ## Download
 
