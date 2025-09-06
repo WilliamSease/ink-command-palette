@@ -96,7 +96,7 @@ cd ${SOURCE_DIR}
 if [[ -s ${SCRIPT_DIR}/toRun ]]; then
   CMD=$(cat ${SCRIPT_DIR}/toRun)
   rm ${SCRIPT_DIR}/toRun
-  $CMD
+  eval $CMD
 else
   echo "No command to run."
 fi
